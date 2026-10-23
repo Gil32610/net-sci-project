@@ -1,0 +1,22 @@
+{
+  "name": "Network Science Project Dev Container",
+  "build": { "dockerfile": "Dockerfile", "context": ".." },
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "remoteUser": "root",
+  "updateRemoteUserUID": true,
+  "mounts": [
+    "source=network-graphs-volume,target=/workspace/transaction_networks,type=volume"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "ms-toolsai.jupyter-renderers",
+        "charliermarsh.ruff"
+      ]
+    }
+  }
+}
